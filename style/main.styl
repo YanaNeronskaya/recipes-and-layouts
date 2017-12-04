@@ -1,0 +1,1500 @@
+@font-face {
+  font-family: Helvetica-HvCn;
+  src: url('../font/HelveticaNeueLTStd-HvCn.otf');
+}
+
+@font-face {
+  font-family: LuxuryRoyaleJF;
+  src: url('../font/LuxuryRoyalJFRegular.ttf');
+}
+
+@font-face {
+  font-family: Helvetica-LtCn;
+  src: url('../font/HelveticaNeueLTStd-LtCn.otf');
+}
+
+@font-face {
+  font-family: Helvetica-Th;
+  src: url('../font/HelveticaNeueLTStd-Th.otf');
+}
+
+@font-face {
+  font-family: Helvetica-Bl;
+  src: url('../font/HelveticaNeueLTStd-BLkCn.otf');
+}
+
+@font-face {
+  font-family: Helvetica-ThCn;
+  src: url('../font/HelveticaNeueLTStd-ThCn.otf');
+}
+
+@font-face {
+  font-family: Bello;
+  src: url('../font/Bello-Script_6557.ttf');
+}
+
+@font-face {
+  font-family: Helvetica-BdCn;
+  src: url('../font/HelveticaNeueLTStd-BdCn.otf');
+}
+
+@font-face {
+  font-family: Helvetica-UL;
+  src: url('../font/HelveticaNeueLTStd-UltLtCn.otf');
+}
+
+@font-face {
+  font-family: Helvetica-Cn;
+  src: url('../font/HelveticaNeueLTStd-Cn.otf');
+}
+
+$common-color = #FD926D
+$iphone = 340px;
+$max-iphone = 767px;
+$touch-pad = 768px
+$desktop = 1200px
+
+*
+  margin: 0
+  padding: 0
+
+a
+  text-decoration none
+  color black
+
+body
+  width: 100%
+  box-sizing: border-box
+
+img
+  cursor pointer
+
+button
+  cursor pointer
+
+.menu-container
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+.menu
+  width: 100%;
+
+.shop-basket
+  background-color: #867A76;
+  height: 50px;
+
+.custom-care
+  width: 100%;
+  flex-grow: 1;
+  background: none;
+  justify-content: center;
+  align-items: cente;
+  flex-direction: row;
+  margin: 4%;
+
+.custom-care > span
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  max-width: max-content;
+  max-height: max-content;
+
+.head-stripe
+  font-family: Arial, sans-serif
+  font-size: 2.7em;
+  color: white
+  @media (min-width: $iphone)
+    font-size: 1.9em;
+  &__number
+    margin 5% 5% 4.7% 5%;
+    text-align: center
+    color: black
+  &__currency
+    width: 24%
+    border-right: 1px solid;
+    background-color black
+    &-name
+      margin: 21% 3% 19% 19%;
+      display: inline-block;
+      padding-top: 1%;
+  &__arrow
+    padding-bottom: 5%;
+    background: none;
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    margin-left: 3px;
+  &__account
+    vertical-align: middle;
+    padding-top: 4%;
+    padding-left: 10%;
+    border-right: 1px solid;
+    width: 50%;
+    background-color black
+    &-icon
+      vertical-align: middle;
+      background-image url('../img/spritesheet-search-contact-mobile.png')
+      display inline-block
+      width 50px
+      height 50px
+    &-name
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 1%;
+  &__search
+    flex-grow 1
+    background-color black
+    &-icon
+      background-image: url(../img/spritesheet-search-contact-mobile.png);
+      display: inline-block;
+      background-position: 110px 5px;
+      width: 50px;
+      height: 50px;
+      margin-top: 20%;
+      margin-left: 23%;
+  &__setting
+    flex-wrap nowrap
+
+.content__mobile
+  &__button
+    border none
+    width 100%
+    text-align start
+    background-color white
+    display inline-block
+    height: 2.9em;
+    color: #656565;
+    font-size: 2em;
+    padding-left: 18px;
+    padding-right: 22px;
+    cursor pointer
+    &_btn-selected
+      background-color $common-color
+      padding-left: 21px;
+      padding-right: 18px;
+      color white
+
+.main__content
+  box-sizing border-box
+  width 100%
+  padding-left: 0;
+  padding-right: 0;
+  @media (max-width: $max-iphone)
+    margin-top: 4%
+    padding-right 15px
+    padding-left 15px
+  @media (min-width: $touch-pad)
+    margin-top: 10%;
+    padding-right 15px
+    padding-left 15px
+  @media (min-width: $desktop )
+    margin-top: 7%;
+    padding-left: 8.5%;
+    padding-right: 7.5%;
+  &-black
+    background-color black
+  &-gray
+    background-color #EDEDED
+
+.content
+  box-sizing border-box
+  width 100%
+  padding-left: 0;
+  padding-right: 0;
+  @media (min-width: $touch-pad)
+    padding-right 15px
+    padding-left 15px
+  @media (min-width: $desktop )
+    padding-left: 8.5%;
+    padding-right: 7.5%;
+  &-black
+    background-color black
+  &-gray
+    background-color #EDEDED
+    margin-top: 1%;
+
+.big-head-stripe
+  display flex
+  justify-content space-between
+  background-color black
+  color: white
+  font-family: Arial, sans-serif
+  font-size: 0.7em;
+  & > div
+  //margin-left 15px
+  //margin-right 15px
+    border-left 1px solid #444444
+  &__number
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-left none
+  &__setting
+    flex-basis: 31.5%;
+    display flex
+  &__arrow
+    padding-bottom: 5%;
+    background: none;
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    margin-left: 3px;
+  &__currency
+    cursor pointer
+    border-left 1px solid #444444
+    flex-basis: 29%
+    position: relative;
+    &-name
+      & > span
+        position: absolute;
+        top: 27%;
+        left: 17%;
+  &__account
+    border-left 1px solid #444444
+    flex-basis: 54%;
+    position relative
+    cursor pointer
+    &-icon
+      background-image: url(../img/spritesheet-search-contact-desctop.png);
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      top: 12%;
+      left: 8%;
+    &-name > p
+      position: absolute;
+      left: 30%;
+      top: 30%;
+  &__search
+    cursor pointer
+    position relative
+    flex-basis: 15%;
+    border-left 1px solid #444444
+    border-right 1px solid #444444
+    &-icon
+      background-image: url(../img/spritesheet-search-contact-desctop.png);
+      height: 20px;
+      position: absolute;
+      background-position: -45px;
+      width: 20px;
+      top: 27%;
+      left: 15%;
+
+.logo
+  padding 0
+  cursor pointer
+  &__image
+    margin: 9% 22% 5.5% 22.4%;
+    width: 56%;
+    cursor pointer
+
+.row-logo
+  align-self: center;
+  cursor pointer
+
+.menu
+  font-family: Arial, sans-serif;
+  font-size 1.9em;
+  &-md
+    @media (min-width: $touch-pad)
+      margin-top: 27px
+
+  &__row
+    display flex
+    justify-content: space-between
+
+  &__basket
+    padding: 0;
+    padding-right: 2%;
+    padding-left: 2%;
+    margin-top: 2%;
+    margin-bottom 2%
+
+    &-content
+      padding: 10px;
+      padding-bottom: 3.3%;
+      display: flex;
+      justify-content: space-between;
+      background-color: #ededed;
+      box-shadow: 1px 3px #e0e0e0;
+      color #949393
+    &-md
+      @media (min-width: $touch-pad)
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+        max-width: 29%;
+        height: 60px;
+        margin-bottom: 2%
+        &-name
+          display: flex;
+          flex-grow: 1;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid #D6D6D6;
+          padding: 0 1%;
+          height: 50%;
+          cursor: pointer;
+
+        .name-of-cart
+          font-size: 12px;
+          font-family: Arial, sans-serif;
+          color: #949393;
+          background: none;
+
+        .triangle
+          border-top: 5px solid #D6D6D6;
+          cursor: pointer;
+
+        &-content
+          display: flex;
+          height: 50%;
+          flex-grow: 1;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid #D6D6D6;
+          background-color: #FAFAFA;
+          padding: 0 1%;
+          font-size: 12px;
+          font-family: Arial, sans-serif;
+          color: #949393;
+          background: none;
+
+        &-image
+          background: url(../img/spritesheet-search-contact-desctop.png) 30px;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+
+        &-cost
+          display: flex;
+          flex-direction: row;
+          flex-grow: 0;
+          align-items: center;
+          justify-content: flex-end;
+          background: none;
+    &-image
+      background-image: url(../img/spritesheet-search-contact-mobile.png);
+      width: 60px;
+      height: 60px;
+      background-position: 59px;
+      margin-top: 7px;
+      margin-left: 18px;
+    &-cost
+      vertical-align: middle;
+      margin-top: 4%;
+      margin-right: 4%;
+    &-cost > span
+      word-spacing: 0.09em;
+
+  &__touch
+    padding: 0;
+    padding-right: 2.4%;
+    padding-left: 2.4%;
+    margin-top: 1.6%;
+    margin-bottom: 1.6%;
+    &-md
+      @media (min-width: $touch-pad)
+        color white
+        padding-left 0
+        padding-right 0
+        margin-top: 1.2%
+        .menu__touch-caption
+          font-size: 0.6em;
+          margin: 1.2%;
+          margin-left: 2.5%;
+          margin-bottom: 2%;
+          margin-top 2%
+
+        .menu__touch-burger
+          border-bottom: 11px double #fff;
+          border-top: 4px solid #fff;
+          height: 3px;
+          width: 22px;
+          margin: 2%;
+
+    &-content
+      background-color: $common-color;
+      justify-content space-between
+      display flex
+      color white
+
+    &-caption
+      margin: 5.2%;
+      margin-left: 4.5%;
+      margin-bottom: 4%;
+    &-burger
+      display: inline-block;
+      border-bottom: 17px double #fff;
+      border-top: 6px solid #fff;
+      height: 5px;
+      width: 30px;
+      background: none;
+      margin: 5%;
+      margin-top: 5.5%;
+      margin-bottom: 5.6%;
+
+.carusel
+  width 100%;
+
+  &__banner-container
+    display: flex;
+    background: url('../img/banner-ipad.png') 100% no-repeat;
+    background-size: cover;
+    flex-grow: 15;
+    width: 100%;
+    flex-direction: row;
+    height: 351px
+  &__text-title
+    display: flex;
+    width: 73%;
+    margin: 0;
+    align-items: center;
+    background: none;
+    font-family: LuxuryRoyaleJF, sans-serif;
+    font-size: 26px;
+    color: #78645d;
+    font-weight: lighter;
+
+  &__text-title::before
+    margin: 0 3% 0 0;
+    height: 2px;
+    content: " ";
+    text-shadow: none;
+    background-color: #999;
+    width: 33%
+
+  &__text-title::after
+    margin: 0 0 0 3%;
+    height: 2px;
+    content: " ";
+    text-shadow: none;
+    background-color: #999;
+    width: 33%;
+
+  &__banner-half
+    width: 50%;
+    display: flex;
+    background: none;
+    justify-content: center;
+
+  &__banner-context
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+
+  .bc-gradient-text
+    font-size: 75.04px;
+    background: none;
+    font-family: Helvetica-HvCn, sans-serif;
+    text-align: center;
+    line-height: 75%;
+  .bold-hr
+    margin: 1% 0;
+    border: none;
+    background-color: #78645d;
+    color: #78645d;
+    height: 1%;
+    width: 100%;
+  .light-hr
+    border: none;
+    background-color: #78645d;
+    color: #78645d;
+    height: 0.4%;
+    width: 100%;;
+.bc-text
+  background: none;
+  font-family: Helvetica-LtCn, sans-serif;
+  font-size: 28px;
+  color: #78645d;
+
+.banner-btn
+  border: none;
+  background-color: #FD926D;
+  font-family: Helvetica-Th, serif;
+  font-size: 14px;
+  width: 40%;
+  height: 10%;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  & .triangle
+    position: absolute;
+    top: 45%;
+    right: 7%;
+
+&__switches
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  & > div
+    cursor: pointer;
+    display: flex;
+    width: 10px;
+    height: 10px;
+    background: #867A76;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-right: 16px;
+  & > div:hover
+    background #FD926D
+
+.top-triangle
+  width: 0;
+  height: 0;
+  position: absolute
+  border-top: 50% solid #4C4C4C;
+  border-right: 50% solid transparent;
+
+.bottom-triangle
+  width: 0;
+  position absolute
+  height: 0;
+  border-bottom: 50% solid white;
+  border-left: 50% solid transparent;
+
+.desktop_menu
+  flex-direction row
+  flex-wrap nowrap
+  align-items: center;
+  &-point:hover
+    color orange
+  &-point
+    cursor pointer
+    display flex
+    flex-grow 1
+    flex-direction row
+    color black
+    &-topic
+      font-family Arial
+      font-size 0.5em
+    &-triangle
+      margin-top: 8px;
+      margin-right: 5px;
+      background: none;
+      width: 0px;
+      height: 0px;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid black;
+
+.email
+  font-family: Arial, sans-serif;
+  font-size 1.9em;
+  padding: 0;
+  &__input-content
+    padding-right: 2%;
+    padding-left: 2%;
+    margin-top: 2.6%;
+    margin-bottom 2%
+  &__input
+    padding: 0;
+    color #949393
+  &__input > input
+    width: 100%;
+    border: none;
+    height: 96px;
+    outline: none;
+    background-color: #ededed;
+    vertical-align: middle;
+    font-size: 1em;
+    font-style: italic;
+    padding-left: 5%;
+    color #949393
+  &__button
+    height: 88px;
+    border: none;
+    padding-left: 0px;
+    cursor pointer
+  &__button > span
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 25px;
+    background-position: -47px;
+    background-image: url(../img/spritesheet-search-contact-mobile.png);
+
+.email-md
+  @media (min-width: $touch-pad)
+    background-color: #ededed;
+    display: flex;
+    font-family: Arial, sans-serif;
+    .email-find-container
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-start;
+      background: none;
+
+    .before-email-phrase
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background: none;
+      margin-right: 2%;
+      & > p
+        font-size: 12px;
+
+    .email-container
+      display: flex;
+      height: 100%;
+      flex-direction: row;
+      align-items: center;
+      background: none;
+
+    .input-email
+      display: flex;
+      flex-grow: 3;
+      width: 100%;
+      border: none;
+      height: 70%;
+      background-color: #FFFFFF;
+
+    .add-symb
+      cursor pointer
+      width: 15%;
+      height: 70%;
+      background: #fd926b url(../img/spritesheet-search-contact-desctop.png) 76px 0px;
+
+    .find-us-container
+      height: 100%;
+      background: none;
+      display: flex;
+      align-items: center;
+
+    .before-socials-container
+      max-width: max-content;
+      background: none;
+      & > p
+        font-size: 12px;
+
+    .networks-container
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      width: 30%;
+
+    .network-area
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #F7F7F7 none;
+      cursor: pointer;
+
+    .network-area:nth-child(1) .soc-container
+      width: 37px;
+      height: 30px;
+      background-position: 80px;
+      flex-basis: 49px;
+
+    .network-area:nth-child(2) .soc-container
+      width: 37px;
+      height: 30px;
+      background-position: 57px;
+      flex-basis: 49px;
+
+    .network-area:nth-child(3) .soc-container
+      width: 42px;
+      height: 32px;
+      background-position: 26px;
+      flex-basis: 49px;
+
+    .soc-container
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      max-width: 50%;
+
+    .soc-container
+      background: #F7F7F7 url('../img/spritesheet-networkss.png');
+
+.row
+  &__socials
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+.socials
+  margin-top: 2%
+  &__phrase
+    font-family Arial
+    font-size 1em
+    color #6C6C6C
+    max-width: max-content;
+  &__content
+    kl: sdf
+  &__icon:hover
+    background-color #EDEDED
+  &__icon
+    cursor pointer
+    width: 89px;
+    height: 89px;
+    padding: 0;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-color-gray
+      background-color #EDEDED
+
+.icon__container
+  background-image url("../img/spritesheet-mob.png")
+
+.socials__icon:nth-child(1) .icon__container:nth-child(1)
+  width: 25px;
+  height: 45px;
+
+.socials__icon:nth-child(2) .icon__container:nth-child(1)
+  width: 35px;
+  height: 45px;
+  background-position: -30px;
+
+.socials__icon:nth-child(3) .icon__container:nth-child(1)
+  width: 40px;
+  height: 45px;
+  background-position: 40px;
+
+.separator
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-top: 8%;
+  @media (max-width: $max-iphone)
+    margin-top: 4%;
+  &__img
+    background-image: url(../img/Shape.png);
+    display: inline-block;
+    flex-basis: 158px;
+    height: 158px;
+    width: 158px;
+    background-repeat: no-repeat;
+    margin-top: -18px;
+    border: 16px solid #fff;
+    z-index: 100;
+
+    &::after
+      margin: 0 0 0 3%;
+      height: 2px;
+      content: " ";
+      text-shadow: none;
+      background-color: #999;
+      width: 33%
+
+    &::before
+      margin: 0 3% 0 0;
+      height: 2px;
+      content: " ";
+      text-shadow: none;
+      background-color: #999;
+      width: 33%;
+    & > span
+      display: flex;
+      text-align: center;
+      margin-top: 27%;
+      margin-left: 7%;
+      font-family: Arial;
+      font-size: 1.3em;
+      color: #fff;
+  &__line
+    display: inline-block;
+    display: inline-block;
+    height: 0px;
+    flex-grow: 1;
+    border: 0.5px solid #e3e3e3;
+    align-self flex-end
+
+.advertising
+  margin-top: 2em;
+  @media (min-width $touch-pad)
+    display: flex;
+    justify-content: center;
+  &__item
+    cursor pointer
+    flex-grow 1
+    & > div
+      height 100%
+      width 100%
+    &-b1
+      max-width 50%
+      background-size: contain;
+      background-repeat no-repeat;
+    &-b2
+      background: url('../img/Layer 3.png');
+      background-size: contain;
+      background-repeat no-repeat;
+    &-b3
+      background: url('../img/Layer 5.png');
+      background-size: contain;
+      background-repeat no-repeat;
+      &-text
+        position absolute
+        font-family Helvetica-UL
+        font-size 2em
+        color #FFFFFF
+        margin-top: 11%;
+        margin-left: 2%;
+
+    &-b4
+      background: url('../img/Layer 7.png');
+      background-size: contain;
+      background-repeat no-repeat;
+      &-text
+        position: absolute;
+        margin-top: 1%;
+        text-align: center;
+        font-family: Helvetica-Cn;
+        font-size: 2em;
+        color: #fff;
+        margin-left: 1.8%;
+      &-btn
+        position: absolute;
+        border: none;
+        background-color: #4fafa0;
+        font-family: Helvetica-Th, serif;
+        font-size: 0.85em;
+        width: 10%;
+        height: 2%;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        margin-top: 11%;
+        margin-left: 2%;
+        & .triangle
+          position: absolute;
+          top: 45%;
+          right: 7%;
+    &__img
+      position: absolute;
+      @media (min-width: $desktop)
+        height: 5.8%;
+        margin: 2% 0 0 3%;
+      @media (max-width: 1199px)
+        margin-left: 1.2%
+        height 5%
+      &-text
+        display flex
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        height: 9.8%;
+        @media (max-width: 1199px)
+          margin-top: 4%;
+          margin-left: 5%;
+        @media (min-width: $desktop)
+          margin-top: 3%;
+          margin-left: 5%;
+        &-summer
+          @media (min-width: $desktop)
+            font-size 2em
+            font-family Bello, sans-serif
+            color #FD926D
+          @media (max-width: 1199px)
+            font-size 1em
+            font-family Bello, sans-serif
+            color #FD926D
+        &-party
+          @media (min-width: $desktop)
+            font-size 2.7em
+            font-family Helvetica-UL
+            color #C1AEA8
+            font-weight: lighter;
+          @media (max-width: 1199px)
+            font-size: 1.7em;
+            font-family Helvetica-UL
+            color #C1AEA8
+            font-weight: lighter;
+        &-collection
+          @media (min-width: $desktop)
+            font-size 1em
+            font-family: Helvetica-BdCn;
+            color: #6a6a6a;
+          @media (max-width: 1199px)
+            font-size: 0.8em;
+            font-family: Helvetica-BdCn;
+            color: #6a6a6a;
+    &__context
+      position absolute
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: -30%;
+      margin-left: 20%;
+  &__container
+    display flex;
+    flex-grow 1
+    cursor pointer
+    &-rotated
+      display: flex;
+      flex-direction: column;
+
+.ad-big-text
+  background: none;
+  position absolute
+  font-family: Helvetica-LtCn, sans-serif;
+  font-size: 28px;
+  color: #78645d;
+  &-bold
+    font-family Helvetica-Bl, sans-serif
+    font-weight bold
+    font-size 2em
+    color #414141
+  &-first
+    font-family Helvetica-ThCn
+    font-size 3em
+    color #414141
+    letter-spacing: 0.1em;
+  &-title
+    background-image url("../img/&.png");
+    width: 1.4em
+    height 1.4em
+    &::before
+      position: absolute;
+      margin: 9% 0% 0px 22%;
+      height: 0.5%;
+      content: " ";
+      text-shadow: none;
+      background-color: #414141;
+      width: 35%;
+    &::after
+      position: absolute;
+      margin: 9% 0px 0 -38%;
+      height: 0.5%;
+      content: " ";
+      text-shadow: none;
+      background-color: #414141;
+      width: 35%;
+  &-second
+    font-family: Helvetica-Bl, sans-serif;
+    font-size: 4em;
+    color: #4fafa0;
+    letter-spacing: 0.02em;
+
+.gallery
+  @media (max-width $max-iphone)
+    margin-top 1.1em;
+    font-family: Arial, sans-serif;
+    margin-top: 1.1em;
+  @media (min-width $touch-pad)
+    margin-top 1.1em;
+    font-family: Arial, sans-serif;
+    margin-top: 3.1em;
+  &__button
+    border none
+    background-color white
+    display inline-block
+    height: 47px;
+    font-size: 0.93em;
+    padding-left: 18px;
+    padding-right: 22px;
+    cursor pointer
+    color #656565
+    &_btn-selected
+      background-color $common-color
+      padding-left: 21px;
+      padding-right: 18px;
+      color white
+    &_arrow
+      background-color #F2F2F2
+      position: relative;
+      &::before
+        content: '';
+        display: block;
+        top: 50%;
+        border: 1px solid #ffffff;
+        width: 40%;
+        height: 40%;
+        transform: translateY(-50%) rotate(45deg);
+        position absolute
+      &-selected
+        background-color $common-color
+  &__navigation
+    width: 100%;
+    display flex
+    justify-content space-between
+    flex-wrap nowrap
+    &-list
+      display: flex
+
+.arrow-left::before
+  left: 19px;
+  border-right: 0;
+  border-top: 0;
+  border-color #979797
+
+.arrow-right::before
+  right: 19px;
+  border-left: 1px;
+  border-bottom: 1px;
+
+.banner-context > h2::after {
+  margin: 0 0 0 3%;
+  height: 2px;
+  content: " ";
+  text-shadow: none;
+  background-color: #999;
+  width: 33%;
+}
+
+.banner-context > h2:before {
+  margin: 0 3% 0 0;
+  height: 2px;
+  content: " ";
+  text-shadow: none;
+  background-color: #999;
+  width: 33%;
+}
+
+.market
+  padding 16px
+  font-family: Arial, sans-serif;
+  &_color-standart
+    background-color $common-color
+  &__item
+    padding 16px
+    position relative
+    padding-bottom: 74px;
+  &__caption
+    padding: 10px;
+    text-align: center;
+    background-color: #f7f7f7;
+    position: absolute;
+    width: 89%;
+    bottom: 3%;
+    padding-right: 26px;
+    padding-left: 26px;
+    padding-bottom: 28px;
+    &-name
+      font-size: 1.1em;
+    &-cost
+      font-size: 1.7em;
+      margin-top: 3.5%;
+  &__caption-button
+    height: 53px;
+    margin-top: 8px
+    position: relative;
+    cursor pointer
+    &-name
+      font-size: 1.45em;
+      position: absolute;
+      left: 28px;
+      top: 21px;
+    &-icon
+      display: inline-block;
+      height: 34px;
+      width: 34px;
+      background-position: -24px;
+      background-size: 125px;
+      background-image: url(../img/spritesheet-search-contact-desctop.png);
+      position: absolute;
+      right: 14px;
+      bottom: 2px;
+  &__footer
+    justify-content center
+  @media (min-width $touch-pad)
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3%;
+    padding-bottom: 7%;
+    &__item
+      padding: 0
+      &_selected
+        transform scale(1.05)
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    &__caption
+      width: 100%;
+      bottom: -6%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & .btn
+        width 73%
+        height 31px
+      &-name
+        font-size: 0.75em;
+      &-cost
+        font-size: 1.3em;
+        margin-top: 3.5%;
+      &-button
+        width 55%
+        &-name
+          color white
+          position: absolute;
+          left: 8%;
+          top: 40%;
+          display: inline-block;
+          font-size: 0.9em;
+        &-icon
+          position: absolute;
+          top: 15%;
+          right: 5%;
+
+.brands
+  margin-top: 3%;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  border-right: none;
+  border-left: none;
+  border-top: 1px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 22px;
+  &__name
+    font-size: 0.9em
+    text-align: center;
+    border-left 5px solid white
+    border-right 5px solid white
+  &__container
+    padding-top: 15px;
+    width: 100%;
+    display flex
+    align-items: center;
+    justify-content: space-around;
+  &__item
+    cursor pointer
+    &:nth-child(1)
+      background-image: url("../img/brands/Layer 21.png");
+      width: 83px;
+      height: 31px;
+    &:nth-child(2)
+      background-image: url("../img/brands/Layer 22.png");
+      width: 51px;
+      height: 57px;
+    &:nth-child(3)
+      background-image: url("../img/brands/Layer 23.png");
+      width: 57px;
+      height: 47px;
+    &:nth-child(4)
+      background-image: url("../img/brands/Layer 24.png");
+      width: 56px;
+      height: 38px;
+    &:nth-child(5)
+      background-image: url("../img/brands/Layer 25.png");
+      width: 84px;
+      height: 16px;
+    &:nth-child(6)
+      background-image: url("../img/brands/Layer 26.png");
+      width: 98px;
+      height: 19px;
+    &:nth-child(7)
+      background-image: url("../img/brands/Layer 27.png");
+      width: 69px;
+      height: 22px;
+    &:nth-child(8)
+      background-image: url("../img/brands/Layer 28.png");
+      width: 137px;
+      height: 27px;
+
+.about
+  margin-top: 20px;
+  margin-bottom: 7px;
+  font-family: Arial, sans-serif;
+  &__title
+    text-align center
+    color: #777777
+    font-size: 1.35em;
+  &__text
+    text-align center
+    color: #5F5F5F
+
+.payment
+  margin-bottom: 21px;
+  padding-top: 16px;
+  @media (min-width $touch-pad)
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: #f7f7f7;
+    flex-wrap: wrap;
+  &__title
+    padding-top: 1%;
+    font-family: Arial;
+    color: #ABABAB;
+    font-size: 0.8em;
+  &__item
+    cursor pointer
+    width: auto;
+    padding-top: 0.5%;
+    margin-right: 1%;
+    background-color: #F7F7F7
+  &__item
+    height: 32px;
+    width: 45px;
+    background: #F7F7F7 url(../img/spritesheet-carsd.png);
+    cursor: pointer;
+    &:nth-child(2)
+      background-position: 480px
+    &:nth-child(3)
+      background-position: 440px
+    &:nth-child(4)
+      background-position: 399px
+    &:nth-child(5)
+      background-position: 355px
+    &:nth-child(6)
+      background-position: 312px
+    &:nth-child(7)
+      background-position: 268px
+    &:nth-child(8)
+      background-position: 224px
+    &:nth-child(9)
+      background-position: 180px
+    &:nth-child(10)
+      background-position: 617px
+    &:nth-child(11)
+      background-position: 573px
+    &:nth-child(12)
+      background-position: 529px
+  &__list
+    display flex
+    asd: asd
+
+.links
+  @media (min-width $touch-pad)
+    display: flex;
+    justify-content space-between
+    background-color #EDEDED
+    padding-top: 23px;
+  & a
+    display: block;
+  & h3
+    margin-bottom: 8px;
+  &__cont
+    display flex
+    flex-wrap wrap
+    &_social
+      flex-basis: 327px;
+      min-width: 327px;
+    &_articles
+      flex-basis: 600px;
+  &__part
+    flex-basis: 150px;
+    flex-grow: 1;
+    margin-bottom: 34px
+    &-last
+      background: url("../img/Ellipse 4.png") 37% no-repeat;
+      width: 163px;
+      height: 157px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    &-last > span
+      font-family: Impact;
+      margin-top: -2%;
+      margin-right: 5%;
+      font-size: 1.2em;
+      color: #a59d9a;
+      text-align: center;
+
+.soc
+  &-row
+    width 100%
+    display flex
+    justify-content flex-start
+  &-item
+    background-image: url("../img/spritesheet-social.png");
+    height: 44px;
+    width: 44px;
+    cursor pointer
+
+.soc-container .soc-row:nth-child(1) .soc-item:nth-child(2)
+  background-position 225px;
+
+.soc-container .soc-row:nth-child(1) .soc-item:nth-child(3)
+  background-position 179px;
+
+.soc-container .soc-row:nth-child(2) .soc-item:nth-child(1)
+  background-position 135px;
+
+.soc-container .soc-row:nth-child(2) .soc-item:nth-child(2)
+  background-position 90px;
+
+.soc-container .soc-row:nth-child(2) .soc-item:nth-child(3)
+  background-position 44px;
+
+.load-more
+  font-family: Arial, sans-serif;
+  height 63px
+  width: 37%;
+  background-color black
+  border none;
+  margin 2%
+  &__text
+    color: #fff;
+    font-size: 1.4em;
+
+.footer
+  @media (max-width: $max-iphone)
+    align-items: center;
+    height: 108px;
+  font-family: Arial, sans-serif;
+  color #8D8D8D
+  background-color black
+  display flex
+  justify-content space-between
+  padding-right: 4%;
+  &__burger
+    border-bottom: 15px double #fff;
+    border-top: 6px solid #fff;
+    height: 7px;
+    width: 34px;
+    margin: 4%;
+    cursor pointer
+  &__privates
+    word-spacing: 0.5em;
+    font-size: 1.4em;
+    text-align: end;
+  & p
+    &::before
+      content: "	\00A9";
+      background-color: #000000;
+  & p, & a
+    color #8D8D8D
+  &__list
+    align-items: center;
+    &-item
+      font-family: Arial
+      font-weight bold
+      cursor pointer
+      &:not(:last-of-type)
+        &::after
+          content: '|';
+
+.btn
+  border: none;
+  background-color: #fd926d;
+  box-shadow: 0px 7px #dd6b44;
+  outline: none;
+  width: 37%;
+  position relative
+  color: white
+
+.head-container {
+  width: 100%;
+  flex-grow: 2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.main-page-head {
+  width: 100%;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.custom-care {
+  display: none;
+  width: 100%;
+  flex-grow: 1;
+  background: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 4%;
+}
+
+.custom-care > span {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  max-width: max-content;
+  max-height: max-content;
+}
+
+.user-settings {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-grow: 1;
+  background-color: #000000;
+}
+
+.currency-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid white;
+  flex-grow: 1;
+  background-color: #000000;
+}
+
+.triangle {
+  background: none;
+  width: 0px;
+  height: 0px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white;
+}
+
+.currency {
+  background-color: black;
+  margin-right: 4%;
+}
+
+.currency > a {
+  background: none;
+  color: white;
+}
+
+.currency-name {
+  background: none;
+}
+
+.currency-name > p {
+  background: none;
+  color: white;
+}
+
+.account-sect {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid white;
+  flex-grow: 2;
+  background-color: #000000;
+}
+
+.account-name {
+  background: none;
+}
+
+.account-name > p {
+  background: none;
+  color: white;
+
+}
+
+.search-sect {
+  flex-grow: 1;
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

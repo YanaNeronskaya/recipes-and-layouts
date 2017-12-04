@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section {}
+
+.md, .lg {
+    display: none;
+}
+
+.sm, .sm-o {
+    display: block;
+
+}
+
+@media (min-width: 361px) {
+    .md{
+        display: block;
+    }
+
+    .lg {
+        display: none;
+    }
+}
+@media (min-width: 769px) {
+    .md, .sm {
+        display: block;
+    }
+
+    .lg, .sm-o {
+        display: none;
+    }
+}
+@media (min-width: 960px) {
+    .lg {
+        display: block;
+    }
+}
+
+.menu-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width:100%;
+}
+.logo__image {
+    margin: 0 auto;
+}
+
+.menu {
+    width: 100%;
+}
+
+.shop-basket {
+    background-color: #867A76;
+    height: 50px;
+}
+
+
+.custom-care {
+    width: 100%;
+    flex-grow: 1;
+    background: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 4%;
+}
+
+.custom-care > span {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    max-width: max-content;
+    max-height: max-content;
+}
+
+div {
+    color: gray;
+    border: 1px solid black;
+}
+
+section{
+    color: gray;
+    border: 1px solid darkred;
+}
+
+.touch-menu {
+    height: 40px;
+    background-color: red;
+}
+
+.email__input-container {
+    height: 40px;
+}
+
+
+
+
+
+.separator {
+    height:70px;
+
+}
